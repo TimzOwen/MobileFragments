@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
+        //onStart up let's have a new launch
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
     }
     //created this out of the onCreate to avoid crowding onCreate method;
     //Using switch to find the fragment that has been selected.
